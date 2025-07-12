@@ -39,7 +39,7 @@ class Browser(QMainWindow):
         self.navbar.addWidget(self.urlbar)
 
         self.dark_mode = False
-        self.add_tab(QUrl.fromLocalFile(os.path.abspath("orionaura.html")))
+        self.add_tab(QUrl.fromLocalFile(os.path.abspath("index.html")))
 
     def add_nav_button(self, name, callback):
         btn = QAction(name, self)
@@ -78,7 +78,7 @@ class Browser(QMainWindow):
     def go_forward(self): self.current_browser().forward()
     def reload_page(self): self.current_browser().reload()
     def go_home(self):
-        self.current_browser().setUrl(QUrl.fromLocalFile(os.path.abspath("orionaura.html")))
+        self.current_browser().setUrl(QUrl.fromLocalFile(os.path.abspath("index.html")))
 
     def bookmark_page(self):
         url = self.current_browser().url().toString()
