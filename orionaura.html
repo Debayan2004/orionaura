@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OrionAura</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #1c2a35, #204c5d);
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 15%;
+    }
+    #search-container {
+      display: inline-flex;
+      align-items: center;
+      background-color: white;
+      border-radius: 30px;
+      padding: 10px 20px;
+    }
+    #searchBox {
+      border: none;
+      outline: none;
+      padding: 10px;
+      width: 300px;
+      font-size: 16px;
+      border-radius: 30px;
+    }
+    #searchButton {
+      background-color: #0078D7;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      margin-left: 10px;
+      font-size: 16px;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <img src="Logo.png" alt="OrionAura Logo" width="80" />
+  <h1>Welcome to OrionAura</h1>
+
+  <form onsubmit="search(); return false;">
+    <div id="search-container">
+      <input type="text" id="searchBox" placeholder="Search the web..." />
+      <button id="searchButton" type="submit">Search</button>
+    </div>
+  </form>
+
+  <script>
+    function search() {
+      const query = document.getElementById("searchBox").value;
+      if (query.trim() !== "") {
+        window.location.href = "https://www.google.com/search?q=" + encodeURIComponent(query);
+      }
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
